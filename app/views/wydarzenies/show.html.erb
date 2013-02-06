@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nazwa:</b>
+  <%= @wydarzeny.nazwa %>
+</p>
+
+<p>
+  <b>Opis:</b>
+  <%= @wydarzeny.opis %>
+</p>
+<p>
+  <b>Autor:</b>
+  <%= @wydarzeny.uzytkownik %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_wydarzeny_path(@wydarzeny) %> |
+<%= link_to 'Back', wydarzenies_path %>

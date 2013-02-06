@@ -1,0 +1,26 @@
+<h1>Spis wpisow</h1>
+
+<table>
+  <tr>
+    <th>Tytul</th>
+    <th>Tresc</th>
+    <th>Autor</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wpis.each do |wpi| %>
+  <tr>
+    <td><%= wpi.tytul %></td>
+    <td><%= wpi.tresc %></td>
+    <td><%= wpi.uzytkownik %></td>
+    <td><%= link_to 'Show', wpi %></td>
+    <td><%= link_to 'Edit', edit_wpi_path(wpi) %></td>
+    <td><%= link_to 'Destroy', wpi, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wpi', new_wpi_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nazwa:</b>
+  <%= @kategorium.nazwa %>
+</p>
+<p>
+  <b>Autor:</b>
+  <%= @kategorium.uzytkownik %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_kategorium_path(@kategorium) %> |
+<%= link_to 'Back', kategoria_path %>

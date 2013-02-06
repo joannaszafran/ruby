@@ -1,0 +1,26 @@
+<h1>Listing komentarzs</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Tresc</th>
+    <th>Autor</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @komentarzs.each do |komentarz| %>
+  <tr>
+    <td><%= komentarz.id %></td>
+    <td><%= komentarz.tresc %></td>
+    <td><%= komentarz.uzytkownik %></td>
+    <td><%= link_to 'Show', komentarz %></td>
+    <td><%= link_to 'Edit', edit_komentarz_path(komentarz) %></td>
+    <td><%= link_to 'Destroy', komentarz, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Komentarz', new_komentarz_path %>

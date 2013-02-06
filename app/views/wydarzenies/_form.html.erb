@@ -1,0 +1,25 @@
+<%= form_for(@wydarzeny) do |f| %>
+  <% if @wydarzeny.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wydarzeny.errors.count, "error") %> prohibited this wydarzeny from being saved:</h2>
+
+      <ul>
+      <% @wydarzeny.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nazwa %><br />
+    <%= f.text_field :nazwa %>
+  </div>
+  <div class="field">
+    <%= f.label :opis %><br />
+    <%= f.text_area :opis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
